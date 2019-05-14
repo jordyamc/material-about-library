@@ -168,6 +168,15 @@ public class ConvenienceBuilder {
                 .build();
     }
 
+    public static MaterialAboutActionItem createWebsiteActionItem(Context c, int icon, CharSequence text, boolean showAddress, final Uri websiteUrl) {
+        return new MaterialAboutActionItem.Builder()
+                .text(text)
+                .subText((showAddress ? websiteUrl.toString() : null))
+                .icon(icon)
+                .setOnClickAction(createWebsiteOnClickAction(c, websiteUrl))
+                .build();
+    }
+
     /**
      * Creates a MaterialAboutItemOnClickAction that will open
      * the Google Play store listing for the app.
