@@ -17,15 +17,13 @@
         <item name="mal_card_background">?colorSurface</item>
     </style>
 
-    <style name="Theme.Mal.Dark.LightActionBar">
+    <style name="Theme.Mal.Dark.LightActionBar" parent="Theme.Mal.Dark">
         <item name="mal_toolbarTheme">@style/Theme.Mal.Toolbar.Light</item>
     </style>
 
-    <style name="Theme.Mal.Light.DarkActionBar">
+    <style name="Theme.Mal.Light.DarkActionBar" parent="Theme.Mal.Light">
         <item name="mal_toolbarTheme">@style/Theme.Mal.Toolbar.Dark</item>
     </style>
-
-
 
     <style name="Theme.Mal.Toolbar.Light" parent="ThemeOverlay.MaterialComponents.Light" />
     <style name="Theme.Mal.Toolbar.Dark" parent="ThemeOverlay.MaterialComponents.Dark" />
