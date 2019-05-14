@@ -30,6 +30,7 @@ dependencies {
     })
     implementation project(':library')
     implementation "androidx.appcompat:appcompat:$androidXVersion"
+    implementation 'androidx.cardview:cardview:1.0.0'
     implementation "com.google.android.material:material:1.1.0-alpha06"
     implementation "com.mikepenz:iconics-core:2.9.5@aar"
     implementation 'com.mikepenz:community-material-typeface:2.0.46.1@aar'
