@@ -63,6 +63,23 @@ public class ConvenienceBuilder {
                 .build();
     }
 
+    public static MaterialAboutActionItem createVersionActionItem(Context c, int iconRes, CharSequence text, boolean includeVersionCode) {
+        String versionName = "";
+        int versionCode = 0;
+        try {
+            PackageInfo pInfo = c.getPackageManager().getPackageInfo(c.getPackageName(), 0);
+            versionName = pInfo.versionName;
+            versionCode = pInfo.versionCode;
+        } catch (PackageManager.NameNotFoundException ignored) {
+            // This shouldn't happen.
+        }
+        return new MaterialAboutActionItem.Builder()
+                .text(text)
+                .subText(versionName + (includeVersionCode ? " (" + versionCode + ")" : ""))
+                .icon(iconRes)
+                .build();
+    }
+
     public static MaterialAboutItemOnClickAction createWebViewDialogOnClickAction(final Context c, final CharSequence dialogTitle, final String htmlString, final boolean isStringUrl, final boolean supportZoom) {
         return createWebViewDialogOnClickAction(c, dialogTitle, c.getString(R.string.mal_close), htmlString, isStringUrl, supportZoom);
     }
